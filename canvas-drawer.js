@@ -28,15 +28,17 @@ function draw() {
         }
     }
 
-    for(i = 0; i < noise.pointLocations.length; i++){
-        ctx.beginPath();
-        ctx.fillStyle = "red";
-        ctx.arc(noise.pointLocations[i].x, noise.pointLocations[i].y, 2, 0, 2 * Math.PI);
-        ctx.fill();
-    }
+    /*  Show point distribution (Debug)  */
+    //for(i = 0; i < noise.pointLocations.length; i++){
+    //    ctx.beginPath();
+    //    ctx.fillStyle = "red";
+    //    ctx.arc(noise.pointLocations[i].x, noise.pointLocations[i].y, 2, 0, 2 * Math.PI);
+    //    ctx.fill();
+    //}
 
     let t2 = performance.now();
     console.log("Noise generation took " +Math.floor(t2 - t1) +"ms");
 }
 //resizeCanvas();
+resizeCanvas();
 var loop = setInterval(resizeCanvas, 3000);
